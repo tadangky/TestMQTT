@@ -30,22 +30,11 @@ android {
         jvmTarget = '1.8'
     }
 
-    signingConfigs {
-        release {
-            keyAlias("tatavn")
-            keyPassword("Tomtit2021")
-            storeFile file("../../key/tadev.jks")
-            storePassword("Tomtit2021")
-        }
-    }
-
     buildTypes {
         debug {
-            signingConfig signingConfigs.release
         }
         release {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
         }
     }
 }
