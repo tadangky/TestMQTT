@@ -55,7 +55,7 @@ class MyApplication : Application() {
 
             client = MqttAndroidClient(context, serverURI, clientID, MemoryPersistence())
             val options = MqttConnectOptions()
-            options.isCleanSession = true
+            options.isCleanSession = false
             options.keepAliveInterval = 5
             options.isAutomaticReconnect = true
             options.maxReconnectDelay = 5000
